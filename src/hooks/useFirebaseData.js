@@ -12,6 +12,12 @@ export function useFirebaseData(path) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    if (!db) {
+      setError(new Error('Firebase is not initialized. Check environment variables.'));
+      setLoading(false);
+      return;
+    }
+
     const dbRef = ref(db, path);
     const unsubscribe = onValue(
       dbRef,
@@ -34,3 +40,4 @@ export function useFirebaseData(path) {
 
   return { data, loading, error };
 }
+

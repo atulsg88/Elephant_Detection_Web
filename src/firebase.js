@@ -12,7 +12,25 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+// Warn in console if critical env vars are missing (common cause of white screen on Vercel)
+const requiredKeys = ['apiKey', 'authDomain', 'databaseURL', 'projectId'];
+requiredKeys.forEach((key) => {
+  if (!firebaseConfig[key]) {
+    console.error(
+      `⚠️ Missing Firebase config: ${key}. ` +
+      `Make sure VITE_FIREBASE_* environment variables are set in your Vercel project settings.`
+    );
+  }
+});
+
+let app;
+let db;
+
+try {
+  app = initializeApp(firebaseConfig);
+  db = getDatabase(app);
+} catch (err) {
+  console.error('Firebase initialization failed:', err);
+}
 
 export { app, db };
