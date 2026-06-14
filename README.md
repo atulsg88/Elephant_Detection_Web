@@ -1,11 +1,14 @@
 # 🐘 Elephant Detection Web Dashboard
 
+[![Vercel Deployment](https://img.shields.io/badge/Deployment-Vercel-black?style=flat&logo=vercel)](https://elephant-detection-web.vercel.app/)
 [![React](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat&logo=react)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Build-Vite-646CFF?style=flat&logo=vite)](https://vitejs.dev/)
 [![Firebase](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=flat&logo=firebase)](https://firebase.google.com/)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=flat&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 A real-time web monitoring dashboard for the **Elephant Detection System** — designed to help forest officials and local communities track and respond to human-elephant conflict (HEC) in real time, directly from any web browser.
+
+🔗 **Live Dashboard:** [elephant-detection-web.vercel.app](https://elephant-detection-web.vercel.app/)
 
 > **Companion Project:** This dashboard works alongside the [Elephant Detection Mobile App](https://github.com/atulsg88/Elephant_Detection_App), which handles on-ground AI-based detection via sensors and night-vision cameras.
 
@@ -131,7 +134,7 @@ npm run preview   # Preview the production build locally
 
 ## 📸 Screenshots
 
-> _Screenshots coming soon — the dashboard features an interactive map, real-time alert feed, and detection analytics._
+> Visit the live dashboard at [elephant-detection-web.vercel.app](https://elephant-detection-web.vercel.app/) to see the application in action.
 
 ---
 
